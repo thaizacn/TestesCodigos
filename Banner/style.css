@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 60%;
+    max-width: 400px;
+    height: 25px;
+    float: left;
+
+}
+
+.frente{
+    position: absolute;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+}
+
+.fundo{
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.slider:hover .frente{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+}
+
+.slider:hover .fundo{
+    transform: rotateY(0deg);
+    cursor: pointer;
+}
+
